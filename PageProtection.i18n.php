@@ -9,7 +9,7 @@
  * @author     Pawel Wilk <pw@gnu.org>
  * @copyright  2006, 2007 Pawel Wilk
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.0b
+ * @version    2.1b
  * @link       http://meta.wikimedia.org/PPP
  */
 
@@ -27,6 +27,35 @@
 $wgPageProtectionMessages = array();
 
 $wgPageProtectionMessages['en'] = array(
+	'ProtectedTitle'		=> 'Page is protected',
+	'ProtectedSite'			=> 'This area is [[$1:PageProtectionPlus|protected]]. You are not allowed to read or edit this area.<br/>' .
+					   "\n" . '* Allowed users: $2 <br/>' . "\n" . '* Allowed groups: $3 <br/>',
+	'ProtectedSiteEditing'		=> 'This page is [[$1:PageProtectionPlus|protected]]. You are not allowed to edit this page.<br/>' . "\n" . 
+					   '* Allowed users: $2 <br/>' . "\n" . '* Allowed groups: $3 <br/>',
+	'CiphersList'			=> 'Here is the list of the available names of ciphers, which you can use when protecting your pages:',
+	'AllCiphersList'		=> 'Here is the list of the available names of ciphers, which can be used while decrypting data:',
+	'pageprotectionciphersuite'	=> 'List of ciphers available to use for protecting pages',
+	'key length'			=> 'key length',
+	'IV length'			=> 'vector length',
+	'crypto_engine'			=> 'engine',
+	'default_algo'			=> 'default algorithm',
+	'rsa_warning'			=> 'caution: strong, pure-RSA encryption &ndash; avoid using on large pages cause it costs a lot of time',
+	'plaintext_warning'		=> 'caution: dummy cipher &ndash; use for debugging and/or profiling purposes',
+	'asymmetric_parameters'		=> 'Parameters of asymmetric keys',
+	'ciphers_parameters'		=> 'Parameters of encryption',
+	'rsa_length_note'		=> 'Default RSA key length',
+	'rsa_id_note'			=> 'Default RSA key ID',
+	'rsa_count_note'		=> 'Total count of the available keys',
+	'symmetric'			=> 'symmetric',
+	'asymmetric'			=> 'asymmetric',
+	'decrypt_error'			=> '* \'\'\'Encryption routine encountered an error, while decrypting [[$1:PageProtectionPlus|protected]] section:\'\'\'' .
+					    "\n" . '<pre>$2</pre>',
+	'encrypt_error'			=> '* \'\'\'Encryption routine encountered an error, while encrypting section to make it [[$1:PageProtectionPlus|protected]]:\'\'\'' .
+					    "\n" . '<pre>$2</pre>',
+
+);
+
+$wgPageProtectionMessages['de'] = array(
 	'ProtectedTitle'		=> 'Page is protected',
 	'ProtectedSite'			=> 'This area is [[$1:PageProtectionPlus|protected]]. You are not allowed to read or edit this area.<br/>' .
 					   "\n" . '* Allowed users: $2 <br/>' . "\n" . '* Allowed groups: $3 <br/>',

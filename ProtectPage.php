@@ -14,7 +14,7 @@
  * @author     Fabian Schmitt <fs@u4m.de>
  * @copyright  2006, 2007 Fabian Schmitt
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.0b
+ * @version    2.1b
  * @link       http://meta.wikimedia.org/PPP
  */
 

@@ -59,11 +59,12 @@ errorpage: Page to be shown when show=page is set.
 
 cipher:   Defines  cipher   to  be   used  for   encryption.
 Valid   ciphers  can   be   found   on  specialpage   called
-Special:PageProtectionCipherSuite You  can put  'rsa' string
-as a value,  which will enable encryption of  the whole text
-with  the RSA  public key  without symmetric  cipher in  the
-middle layer.  It is powerful,  but very very slow  (and not
-recommended for larger pages).
+Special:PageProtectionCipherSuite
+
+You  can put  'rsa' string  as  a value,  which will  enable
+encryption of the whole text with the RSA public key without
+symmetric cipher  in the middle  layer. It is  powerful, but
+very very slow (and not recommended for larger pages).
 
 The text between the opening and closing 'protect'-tags will
 be hidden for  users not in the specified  lists. Members of
@@ -95,13 +96,13 @@ will  be generated  for encryption  and placed  in the  file
 saved under that name.
 
 * Second exception  is the name 'lite.pem' (or  other set in
-$wgPEMfile_lite). The  file named  like that  should contain
+$wgPEMlite_file). The  file named  like that  should contain
 the  default key  used  for encryption  by  using so  called
 'Pure-RSA' method.  If you'll  change its name,  the routine
 use it to decrypt pages  previously encrypted with it, but a
 new key pair  will be generated for  Pure-RSA encryption and
 placed in the file saved  under the name 'lite.pem' or other
-set in $wgPEMfile_lite.
+set in $wgPEMlite_file.
 
 == Am I able to decrypt pages from PageProtection ==
 

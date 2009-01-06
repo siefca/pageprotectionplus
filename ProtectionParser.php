@@ -10,10 +10,10 @@
  *
  * @category   Encryption
  * @package    PageProtectionPlus
- * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>
+ * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>, Mike Dillon <mdillon@citysearch.com>
  * @copyright  2006, 2007 Fabian Schmitt, Pawel Wilk
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.0b
+ * @version    2.1b
  * @link       http://meta.wikimedia.org/PPP
  */
 
@@ -107,7 +107,19 @@ class ProtectionParser
                $this->mElements,
                $this->mText,
                $this->mContent );
-        
+
+        // Strip out anything except <protect> (i.e. <!-- --> comments)
+        foreach ($this->mContent as $key => $content) {
+            if (strtolower($content[0]) === PROTECT_TAG) continue;
+
+            // Put back text by replacing random key with original text
+	    $this->mParsedText = str_replace(
+                $key, $content[3], $this->mParsedText);
+
+            // Remove content for replaced $key from $this->mContent
+	    unset($this->mContent[$key]);
+        }
+
         // decrypt all tags that are stored encrypted
         foreach($this->mContent as $key => $content)
         {

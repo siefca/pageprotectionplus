@@ -63,7 +63,7 @@ $PageProtectionRSAKeyDir = "keys";
 $PageProtectionRSAKeyFile = "default.pem";
 
 /* RSA default 'lite' key filename.		*/
-/* It may be overriden by $wgPEMfile_lite	*/
+/* It may be overriden by $wgPEMlite_file	*/
 /* variable placed in LocalSettings.php		*/
 
 $PageProtectionRSALiteKeyFile = "lite.pem";
