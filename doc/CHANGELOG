@@ -1,3 +1,6 @@
+2.2b
+ - added fixes from Mike Dillon (removed line break from i18n,
+                                 added custom super-groups support)
 2.1b
  - added parser-fix from Mike Dillon (HTML comments are possible now)
  - fixed error internationalisation at engines' error reporting section

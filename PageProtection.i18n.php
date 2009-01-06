@@ -9,8 +9,8 @@
  * @author     Pawel Wilk <pw@gnu.org>
  * @copyright  2006, 2007 Pawel Wilk
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.1b
- * @link       http://meta.wikimedia.org/PPP
+ * @version    2.2b
+ * @link       http://www.mediawiki.org/wiki/Extension:PPP
  */
 
 /**
@@ -52,7 +52,6 @@ $wgPageProtectionMessages['en'] = array(
 					    "\n" . '<pre>$2</pre>',
 	'encrypt_error'			=> '* \'\'\'Encryption routine encountered an error, while encrypting section to make it [[$1:PageProtectionPlus|protected]]:\'\'\'' .
 					    "\n" . '<pre>$2</pre>',
-
 );
 
 $wgPageProtectionMessages['de'] = array(
@@ -81,7 +80,6 @@ $wgPageProtectionMessages['de'] = array(
 					    "\n" . '<pre>$2</pre>',
 	'encrypt_error'			=> '* \'\'\'Encryption routine encountered an error, while encrypting section to make it [[$1:PageProtectionPlus|protected]]:\'\'\'' .
 					    "\n" . '<pre>$2</pre>',
-
 );
 
 $wgPageProtectionMessages['pl'] = array(
@@ -110,8 +108,6 @@ $wgPageProtectionMessages['pl'] = array(
 	'encrypt_error'			=> '* \'\'\'Mechanizm szyfrujący wykrył błąd podczas szyfrowania [[$1:PageProtectionPlus|chronionej]] sekcji:\'\'\'' .
 					    "\n" . '<pre>$2</pre>',
 );
-
 //$wgRenameuserMessages['zh-hk'] = $wgRenameuserMessages['zh-tw'];
 //$wgRenameuserMessages['zh-sg'] = $wgRenameuserMessages['zh-cn'];
 ?>
-

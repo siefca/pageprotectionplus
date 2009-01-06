@@ -1,5 +1,7 @@
 <?php
 
+/* Randomization helpers by Pawel Wilk ( pw [at] gnu dot org ) */
+
 /**
  * Converts HEX to BIN.
  */

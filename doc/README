@@ -115,6 +115,11 @@ Yes. Pure-RSA  is supported, but  you won't be able  to read
 the  pages encrypted  in that  way under  PageProtection (in
 case of downgrade, reinstall).
 
+== How can I change the group that is able to read anything? ==
+
+It defaults to 'sysop' but you can modify the source file named
+PageProtectionPlus.php by adding or removing $wgPppDefaultGroups
+array entries.
 
 Copyright (C) 2006, 2007 Pawel Wilk (pw@gnu.org)
 Portions Copyright (C) 2006 Fabian Schmitt (fs@u4m.de)

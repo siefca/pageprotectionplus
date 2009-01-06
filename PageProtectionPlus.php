@@ -10,8 +10,8 @@
  * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>
  * @copyright  2006, 2007 Fabian Schmitt, Pawel Wilk
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.1b
- * @link       http://meta.wikimedia.org/PPP
+ * @version    2.2b
+ * @link       http://www.mediawiki.org/wiki/Extension:PPP
  */
 
 define("PROTECT_TAG",	"protect");
@@ -26,15 +26,20 @@ $wgExtensionFunctions[] = "wfPageProtection";
 $wgExtensionCredits['parserhook'][] = array(
     'name' => 'PPP',
     'author' => 'Fabian Schmitt, Paweł Wilk',
-    'version' => '2.0b',
-    'url' => 'http://meta.wikimedia.org/wiki/PPP' );
+    'version' => '2.2b',
+    'url' => 'http://www.mediawiki.org/wiki/Extension:PPP' );
 
 /* register special page hook */
 $wgExtensionCredits['specialpage'][] = array(
     'name' => 'PPP',
     'author' => 'Paweł Wilk, Fabian Schmitt',
-    'version' => '2.1b',
-    'url' => 'http://meta.wikimedia.org/wiki/PPP' );
+    'version' => '2.2b',
+    'url' => 'http://www.mediawiki.org/wiki/Extension:PPP' );
+
+/* Default groups that can read anything */
+$wgPppDefaultGroups = array(
+    "sysop"
+);
 
 /**
  * Extension-function. Registers special page for displaying ciphersuite

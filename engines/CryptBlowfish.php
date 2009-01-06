@@ -1,5 +1,8 @@
 <?php
 
+/* Blowfish module plugin */
+/* by Pawel Wilk (pw-at-gnu-dot-org) */
+
 require_once("PEAR.php");
 @include_once("Crypt/Blowfish.php");
 

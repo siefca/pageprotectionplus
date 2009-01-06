@@ -1,5 +1,8 @@
 <?php
 
+/* MCrypt plugin */
+/* by Pawel Wilk (pw-at-gnu-dot-org) */
+
 /* globals */
 global $CipherSuiteHooks;
 global $last_mcrypt_error;

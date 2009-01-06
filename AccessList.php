@@ -11,8 +11,8 @@
  * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>
  * @copyright  2006, 2007 Fabian Schmitt
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.1b
- * @link       http://meta.wikimedia.org/PPP
+ * @version    2.2b
+ * @link       http://www.mediawiki.org/wiki/Extension:PPP
  */
 
 
@@ -29,16 +29,22 @@ class AccessList
     protected $mGroups = array();
     
     /**
-     * Constructor. Creates default user-list and ensures sysop
-     * is in allowed groups.
+     * Constructor. Creates default user-list and ensures groups in
+     * $wgPppDefaultGroups are in allowed groups.
      * @param users Array or comma-separated users-list.
      * @param groups Array or comma-separated groups-list.
      */
     function AccessList($users = null, $groups = null)
     {
+        global $wgPppDefaultGroups;
+
         $this->AddUsers($this->getArray($users));
         $this->AddGroups($this->getArray($groups));
-        $this->AddGroup("sysop");
+        if (is_array($wgPppDefaultGroups)) {
+            foreach ($wgPppDefaultGroups as $defaultGroup) {
+                $this->AddGroup($defaultGroup);
+            }
+        }
     }
     
     /**
@@ -119,9 +125,6 @@ class AccessList
             if(in_array($group, $user->mGroups)){
                 return true;
             }
-        }
-        if(in_array("sysop", $user->mGroups)){
-            return true;
         }
     
         if (in_array($user->getName(), $this->mUsers)) {

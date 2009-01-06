@@ -1,5 +1,8 @@
 <?php
 
+/* Plaintext dummy plugin */
+/* by Pawel Wilk (pw-at-gnu-dot-org) */
+
 /* globals */
 global $last_plain_error;
 global $CipherSuiteHooks;

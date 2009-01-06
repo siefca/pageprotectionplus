@@ -1,5 +1,8 @@
 <?php
 
+/* RSA plugin */
+/* by Pawel Wilk (pw-at-gnu-dot-org) */
+
 require_once("PEAR.php");
 require_once("Crypt/RSA.php");
 require_once("RandKeyGen.php");
