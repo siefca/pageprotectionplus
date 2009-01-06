@@ -13,7 +13,7 @@
  * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>, Mike Dillon <mdillon@citysearch.com>
  * @copyright  2006, 2007 Fabian Schmitt, Pawel Wilk
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.2b
+ * @version    2.3b
  * @link       http://www.mediawiki.org/wiki/Extension:PPP
  */
 

@@ -11,7 +11,7 @@
  * @author     Fabian Schmitt <fs@u4m.de>, Pawel Wilk <pw@gnu.org>
  * @copyright  2006, 2007 Fabian Schmitt
  * @license    http://www.gnu.org/licenses/gpl.html  General Public License version 2 or higher
- * @version    2.2b
+ * @version    2.3b
  * @link       http://www.mediawiki.org/wiki/Extension:PPP
  */
 
@@ -36,10 +36,20 @@ class AccessList
      */
     function AccessList($users = null, $groups = null)
     {
-        global $wgPppDefaultGroups;
 
         $this->AddUsers($this->getArray($users));
         $this->AddGroups($this->getArray($groups));
+    }
+
+
+   /**
+     * Fills an AccessList with default values. This must not be done
+     * in the Constructor since we need empty AccessLists every now and
+     * then (e.g. to check who is allowed to edit pages).
+     * 
+     */
+    function AccessListDefaults() {
+        global $wgPppDefaultGroups;
         if (is_array($wgPppDefaultGroups)) {
             foreach ($wgPppDefaultGroups as $defaultGroup) {
                 $this->AddGroup($defaultGroup);
